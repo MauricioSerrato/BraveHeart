@@ -7,6 +7,8 @@ const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
+const Data = require('./models/data.js')
+const Exercise = require('./models/schema.js')
 //___________________
 //Port
 //___________________
@@ -44,12 +46,22 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
+
+//___________________
+// inserting data
+//___________________
+
+Exercise.create(Data, (err, data) =>{
+    console.log('added the exercise log to db')
+})
+
+
 //___________________
 // Routes
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('index.ejs');
 });
 
 //___________________
