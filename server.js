@@ -1,6 +1,7 @@
 //___________________
 //Dependencies
 //___________________
+const { application } = require('express');
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
@@ -59,11 +60,51 @@ Exercise.create(Data, (err, data) =>{
 //___________________
 // Routes
 //___________________
+
+//___________________
+// Creating Show route
+//  for exercises
+//___________________
+
+
+app.get('/home/workouts-chest/:id', (req,res) => {
+    Exercise.findById(req.params.id, (err, exercise) =>{
+        res.render('show.ejs', {
+            exercise: exercise
+        })
+    })
+})
+
+app.get('/home/workouts', (req, res)=>{
+    Exercise.find({}, (err, allLog) => {
+        res.render(
+            'index.ejs', 
+            {
+                log: allLog
+            })
+    })
+})
+
+
+app.get('/home/workouts-chest', (req,res) =>{
+    Exercise.find({}, (err, data) =>{
+        res.render('chest.ejs', 
+        {
+            log: data
+        })
+    })
+    
+})
+
+
+app.get('/home',(req, res) => {
+    res.render('home.ejs')
+})
+  
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.render('index.ejs');
-});
-
+    res.send('Hello World!');
+  });
 //___________________
 //Listener
 //___________________

@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/header.ejs')%>
+
+
 </head>
 <body>
-    <h1>One Health</h1>
+    <header>
+        <%- include('./partials/nav.ejs')%>
+    </header>
+    <div>
+        <div class="container text-center">
+            <div class="row p-2">
+              <div class="col">
+               <h1> Day </h1>
+              </div>
+              <div class="col">
+                <h1>Exercise</h1>
+              </div>
+              <div class="col">
+                <h1>Cardio</h1>
+              </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Monday
+                </div>
+                <div class="col">
+                  <a href="/home/workouts-chest">Chest</a>
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Tuesday
+                </div>
+                <div class="col">
+                  Legs
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Wednesday
+                </div>
+                <div class="col">
+                  Back
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Thursday
+                </div>
+                <div class="col">
+                  Shoulders
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Friday
+                </div>
+                <div class="col">
+                  Arms
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Saturday
+                </div>
+                <div class="col">
+                  Exercise
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                  Sunday
+                </div>
+                <div class="col">
+                  Exercise
+                </div>
+                <div class="col">
+                  Cardio
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+     
+    </div>  
+    <footer class="bg-light py-5">
+        <div class="container">
+          <div class="small text-center text-muted">Copyright &copy; This project was created using bootstrap 5.2 MDB , MongoDB Express EJS MongoOse Jquery & JS <br />Copyright ©
+            2022 Sami Sipahi GA project 2</div>
+        </div>
+      </footer>
 </body>
 </html>

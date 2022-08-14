@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/header.ejs')%>
+</head>
+<body>
+    <header>
+        <%- include ('./partials/nav.ejs')%>
+    </header>
+    <H1>Welcome To chest day</H1>
+
+    <%for(let i = 0; i <log.length; i++){%>
+       <%if(log[i].type == "chest"){%>
+        <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a> <a href="">EDIT</a><br>
+        <%=log[i].setOne%><br>
+        <%=log[i].repsOne%><br>
+        <%=log[i].setTwo%><br>
+        <%=log[i].repsTwo%><br>
+        <%=log[i].setThree%><br>
+        <%=log[i].repThree%><br>
+        <%=log[i].setFour%><br>
+        <%=log[i].repsFour%><br>
+
+
+
+
+       <%}%>
+    <%}%>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zYXX26rIcd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</body>
+</html>

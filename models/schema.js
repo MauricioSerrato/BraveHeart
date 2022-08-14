@@ -1,10 +1,18 @@
 const mongoose = require ('mongoose')
 
 const exerciseSchema = new mongoose.Schema ({
-    day: {type: String, required: true },
-    type: {type: String, required: true},
-    workout: {type: Boolean, required: true},
-    exercise: {type: String, required: true},
+    type: {type: String},
+    workout: {type: Boolean},
+    exercise: {type: String},
+    setOne: {type: Number},
+    repsOne: {type: Number},
+    setTwo: {type: Number},
+    repsTwo: {type: Number},
+    setThree: {type: Number},
+    repsThree: {type: Number},
+    setFour: {type: Number},
+    repsFour: {type: Number},
+    video: {type: String}
 })
 
 //creating the collection within mongoose with database created

@@ -1,0 +1,51 @@
+
+footer{
+    background-color: gray;
+}
+.footer{
+    display: flex;
+    margin-top: 0;
+    height: 15vh;
+    justify-content: center;
+    background-color: #28282B;
+    justify-content: space-around;
+}
+
+h3{
+    font-size: small;
+}
+
+
+.footer-2{
+    display: flex;
+    margin-top: 0;
+    background-color: grey;
+    font-size: small;
+    justify-content: center;
+}
+
+a:hover{
+    color: red;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    background-image: url(https://24wallpapers.com/app-gateway/wallpaper-uploads/wallpapers/legacyUploads/wi502c3471de8-5f42-4d42-9d56-aa24d114bca017.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
