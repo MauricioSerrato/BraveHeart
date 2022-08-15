@@ -52,9 +52,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // inserting data
 //___________________
 
-Exercise.create(Data, (err, data) =>{
-    console.log('added the exercise log to db')
-})
+// Exercise.create(Data, (err, data) =>{
+//     console.log('added the exercise log to db')
+// })
 
 
 //___________________

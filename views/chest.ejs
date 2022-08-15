@@ -12,14 +12,14 @@
     <%for(let i = 0; i <log.length; i++){%>
        <%if(log[i].type == "chest"){%>
         <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a> <a href="">EDIT</a><br>
-        <%=log[i].setOne%><br>
-        <%=log[i].repsOne%><br>
-        <%=log[i].setTwo%><br>
-        <%=log[i].repsTwo%><br>
-        <%=log[i].setThree%><br>
-        <%=log[i].repThree%><br>
-        <%=log[i].setFour%><br>
-        <%=log[i].repsFour%><br>
+        Set 1: <%=log[i].setOne%><br>
+        Reps: <%=log[i].repsOne%><br>
+        Set 2: <%=log[i].setTwo%><br>
+        Reps: <%=log[i].repsTwo%><br>
+        Set 3: <%=log[i].setThree%><br>
+        Reps: <%=log[i].repsThree%><br>
+        Set 4:<%=log[i].setFour%><br>
+        Reps: <%=log[i].repsFour%><br>
 
 
 
