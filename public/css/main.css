@@ -25,7 +25,7 @@ h3{
 }
 
 a:hover{
-    color: red;
+    color: green;
 
 }
 
@@ -101,4 +101,15 @@ a{
     background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.mainShoulders{
+    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card :hover{
+   box-shadow: inset 18rem 0 0 0 #025839; 
+   transition: ease-in 0.2s;
 }
