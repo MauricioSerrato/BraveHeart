@@ -95,7 +95,7 @@ a{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 .mainShow{
     background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
@@ -104,7 +104,7 @@ a{
 }
 
 .mainShoulders{
-    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-image: url(https://evercon.in/images/sele_baground.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -112,4 +112,10 @@ a{
 .card :hover{
    box-shadow: inset 18rem 0 0 0 #025839; 
    transition: ease-in 0.2s;
+}
+
+.mainChest{
+    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
