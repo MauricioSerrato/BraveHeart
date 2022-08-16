@@ -115,7 +115,27 @@ a{
 }
 
 .mainChest{
-    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-image: url(https://evercon.in/images/sele_baground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainLegs{
+    background-image: url(https://evercon.in/images/sele_baground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainBack{
+    background-image: url(https://evercon.in/images/sele_baground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.mainArms{
+    background-image: url(https://evercon.in/images/sele_baground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
