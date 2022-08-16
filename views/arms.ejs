@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/header.ejs')%>
+</head>
+<body>
+    <header>
+        <%- include ('./partials/nav.ejs')%>
+    </header>
+    <H1>Welcome To Arm day</H1>
+   <h3><a href="/new">Add New Exercise</a></h3>
+    <%for(let i = 0; i <log.length; i++){%>
+       <%if(log[i].type == "Biceps" | log[i].type == "Triceps"){%>
+        <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a>
+        <form action="/home/<%=log[i]._id%>/edit">
+        <input type="submit" value="Update Weight">
+        </form>
+        <form action="/home/<%=log[i]._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Exercise">
+        </form><br>
+        Set 1: Weight: <%=log[i].setOne%><br>
+        Reps: <%=log[i].repsOne%><br>
+        Set 2: Weight: <%=log[i].setTwo%><br>
+        Reps: <%=log[i].repsTwo%><br>
+        Set 3: Weight: <%=log[i].setThree%><br>
+        Reps: <%=log[i].repsThree%><br>
+        Set 4:Weight: <%=log[i].setFour%><br>
+        Reps: <%=log[i].repsFour%><br>
+
+
+
+
+       <%}%>
+    <%}%>
+<div>
+</div>
+</body>
+</html>

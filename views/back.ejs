@@ -7,10 +7,10 @@
     <header>
         <%- include ('./partials/nav.ejs')%>
     </header>
-    <H1>Welcome To chest day</H1>
+    <H1>Welcome To Back day</H1>
    <h3><a href="/new">Add New Exercise</a></h3>
     <%for(let i = 0; i <log.length; i++){%>
-       <%if(log[i].type == "Shoulders"){%>
+       <%if(log[i].type == "Back" | log[i].type == "Biceps" ){%>
         <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a>
         <form action="/home/<%=log[i]._id%>/edit">
         <input type="submit" value="Update Weight">

@@ -48,4 +48,27 @@ a{
     background-size:cover;
 }
 
+.cardWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: center;
+    height: 90%;
+    width: 80%;
+    margin-left: 10%;
 
+
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}

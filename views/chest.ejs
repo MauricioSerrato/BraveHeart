@@ -3,31 +3,48 @@
 <head>
     <%- include ('./partials/header.ejs')%>
 </head>
-<body>
+<body style="background-color: grey;">
+
     <header>
         <%- include ('./partials/nav.ejs')%>
-    </header>
-    <H1>Welcome To chest day</H1>
+    </header>  
+    <div class="intro">
+        <H1 class="Welcome">Welcome To Chest Day</H1><br>
+    </div>    
 
+    <div class="add">
+        <h2 class="add"><a href="/new">Add New Exercise</a></h2><br>
+    </div>
+
+ 
+ <div class="cardWrap">   
     <%for(let i = 0; i <log.length; i++){%>
-       <%if(log[i].type == "chest"){%>
-        <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a> <a href="">EDIT</a><br>
-        Set 1: <%=log[i].setOne%><br>
-        Reps: <%=log[i].repsOne%><br>
-        Set 2: <%=log[i].setTwo%><br>
-        Reps: <%=log[i].repsTwo%><br>
-        Set 3: <%=log[i].setThree%><br>
-        Reps: <%=log[i].repsThree%><br>
-        Set 4:<%=log[i].setFour%><br>
-        Reps: <%=log[i].repsFour%><br>
-
-
-
-
-       <%}%>
+    <%if(log[i].type == "chest" | log[i].type == "Triceps" ){%>
+     <div class="card p-2 m-3" style="width: 18rem;">
+        <div class="card-body text-bg-success mb-3">
+          <h5 class="card-title "><%=log[i].exercise%></h5>
+          <a href="/home/workouts-chest/<%=log[i]._id%>"><%=log[i].exercise%></a>
+          <form action="/home/<%=log[i]._id%>/edit">
+          <input type="submit" value="Update Weight">
+          </form>
+          <form action="/home/<%=log[i]._id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete Exercise">
+          </form><br>
+          <p class="card-text">Set 1: Weight: <%=log[i].setOne%><br>
+            Reps: <%=log[i].repsOne%><br>
+            Set 2: Weight: <%=log[i].setTwo%><br>
+            Reps: <%=log[i].repsTwo%><br>
+            Set 3: Weight: <%=log[i].setThree%><br>
+            Reps: <%=log[i].repsThree%><br>
+            Set 4:Weight: <%=log[i].setFour%><br>
+            Reps: <%=log[i].repsFour%><br></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
     <%}%>
-<div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zYXX26rIcd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+    <%}%>
+
+</div>    
+
 </body>
 </html>

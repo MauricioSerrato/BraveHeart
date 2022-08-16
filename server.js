@@ -61,6 +61,60 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
+
+//___________________
+// Delete Route
+//___________________
+app.delete('/home/:id', (req,res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, deleted) => {
+        res.redirect('/home/workouts-chest')
+    })
+})
+
+
+//___________________
+// Put Routes
+//  after edit rout
+//___________________
+//the route has to b /home/id, however redirect can be different to page you want to see update!
+app.put('/home/:id', (req,res) =>{
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, update) => {
+        res.redirect('/home/workouts')
+    })
+})
+
+//___________________
+// Post Routes
+//  
+//___________________
+app.get('/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+app.post('/home', (req,res) => {
+    Exercise.create(req.body, (err, newExercise)=>{
+        res.redirect('/home/workouts')
+    })
+})
+
+
+
+//___________________
+// Creating edit route
+//  for exercises
+//___________________
+
+app.get('/home/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (error, exercise)=> {
+        res.render('edit.ejs',
+        {
+            exercise: exercise
+        })
+    })
+})
+
+
+
 //___________________
 // Creating Show route
 //  for exercises
@@ -75,6 +129,8 @@ app.get('/home/workouts-chest/:id', (req,res) => {
     })
 })
 
+
+
 app.get('/home/workouts', (req, res)=>{
     Exercise.find({}, (err, allLog) => {
         res.render(
@@ -84,8 +140,43 @@ app.get('/home/workouts', (req, res)=>{
             })
     })
 })
+app.get('/home/workouts-legs', (req,res) =>{
+    Exercise.find({}, (err, data) =>{
+        res.render('legs.ejs', 
+        {
+            log: data
+        })
+    })
+    
+})
+app.get('/home/workouts-back', (req,res) =>{
+    Exercise.find({}, (err, data) =>{
+        res.render('back.ejs', 
+        {
+            log: data
+        })
+    })
+    
+})
+app.get('/home/workouts-shoulders', (req,res) =>{
+    Exercise.find({}, (err, data) =>{
+        res.render('shoulders.ejs', 
+        {
+            log: data
+        })
+    })
+    
+})
 
-
+app.get('/home/workouts-arms', (req,res) =>{
+    Exercise.find({}, (err, data) =>{
+        res.render('arms.ejs', 
+        {
+            log: data
+        })
+    })
+    
+})
 app.get('/home/workouts-chest', (req,res) =>{
     Exercise.find({}, (err, data) =>{
         res.render('chest.ejs', 

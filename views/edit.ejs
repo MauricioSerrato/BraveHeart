@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   edit page
+   <h2>Update Desired Field Below</h2> 
+   <!-- //action is where it is taking us after submit -->
+   <form action="/home/<%=exercise.id%>?_method=PUT" method="post">
+    <input type="text" name="type" value="<%=exercise.type%>">
+    
+    <input type="text" name="exercise" value="<%=exercise.exercise%>"><br>
+    <input type="text" name="setOne" value="<%=exercise.setOne%>">
+    <input type="text" name="repsOne" value="<%=exercise.repsOne%>"><br>
+    <input type="text" name="setTwo" value="<%=exercise.setTwo%>">
+    <input type="text" name="repsTwo" value="<%=exercise.repsTwo%>"><br>
+    <input type="text" name="setThree" value="<%=exercise.setThree%>">
+    <input type="text" name="repsThree" value="<%=exercise.repsThree%>"><br>
+    <input type="text" name="setFour" value="<%=exercise.setFour%>">
+    <input type="text" name="repsFour" value="<%=exercise.repsFour%>"><br>
+    <input type="text" name="video" value="<%=exercise.video%>"><br>
+    <a href="/home/workouts-chest">Go Back</a>
+    <input type="submit" value="update changes" >
+
+   </form>
+</body>
+</html>
