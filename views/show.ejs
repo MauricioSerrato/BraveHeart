@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/header.ejs')%>
 </head>
-<body>
-    <%=exercise.type%>
-    <iframe width="560" height="315" src="<%=exercise.video%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<body >
+    <header>
+        <header>
+            <%- include('./partials/nav.ejs')%>
+        </header>
+    </header>
+    <div class="mainShow">
+    <div class="showcontainer">
+        <div class="focus">
+            <h1>Area Of Focus: <%=exercise.type%></h1>
+        </div>
+        <div class="exercise">
+            <h2>Exercise Name: <%=exercise.exercise%></h2>
+        </div class = image>      
+        
+            <iframe width="560" height="315" src="<%=exercise.video%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+        <div>
+            <h2 class="add"><a href="/home/workouts">Go Back</a></h2><br>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs')%>    
+
+    </footer>
 </body>
 </html>
