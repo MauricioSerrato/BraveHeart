@@ -187,6 +187,14 @@ app.get('/home/workouts-chest', (req,res) =>{
     
 })
 
+app.get('/home/eats', (req,res) => {
+    res.render('food.ejs')
+})
+
+app.get('/home/link', (req, res) => {
+    res.render('link.ejs')
+})
+
 
 app.get('/home',(req, res) => {
     res.render('home.ejs')

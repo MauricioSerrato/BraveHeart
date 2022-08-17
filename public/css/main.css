@@ -139,3 +139,43 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.mainEdit{
+    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.editForm{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #28282B;
+    border-style: solid;
+    border-width: 1em;
+
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+
+}
+
+.food{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.mainFood{
+    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

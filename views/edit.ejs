@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include ('./partials/header.ejs')%>
+
 </head>
 <body>
-   edit page
-   <h2>Update Desired Field Below</h2> 
-   <!-- //action is where it is taking us after submit -->
-   <form action="/home/<%=exercise.id%>?_method=PUT" method="post">
-    <input type="text" name="type" value="<%=exercise.type%>">
-    
-    <input type="text" name="exercise" value="<%=exercise.exercise%>"><br>
-    <input type="text" name="setOne" value="<%=exercise.setOne%>">
-    <input type="text" name="repsOne" value="<%=exercise.repsOne%>"><br>
-    <input type="text" name="setTwo" value="<%=exercise.setTwo%>">
-    <input type="text" name="repsTwo" value="<%=exercise.repsTwo%>"><br>
-    <input type="text" name="setThree" value="<%=exercise.setThree%>">
-    <input type="text" name="repsThree" value="<%=exercise.repsThree%>"><br>
-    <input type="text" name="setFour" value="<%=exercise.setFour%>">
-    <input type="text" name="repsFour" value="<%=exercise.repsFour%>"><br>
-    <input type="text" name="video" value="<%=exercise.video%>"><br>
-    <a href="/home/workouts-chest">Go Back</a>
-    <input type="submit" value="update changes" >
+    <header>
+        <%- include ('./partials/nav.ejs')%>
 
-   </form>
+    </header>
+<div class="mainEdit">    
+   
+   <!-- //action is where it is taking us after submit -->
+   <div class="editForm">
+    <h2>Update Desired Field Below</h2> 
+   <form action="/home/<%=exercise.id%>?_method=PUT" method="post">
+        <div class="input">
+            Focus: <input type="text" name="type" value="<%=exercise.type%>">
+        </div>
+        <div class="input">
+            Exercise: <input type="text" name="exercise" value="<%=exercise.exercise%>"><br>
+        </div>
+        <div class="input">
+            Set 1 Weight: <input type="text" name="setOne" value="<%=exercise.setOne%>">
+            Reps:<input type="text" name="repsOne" value="<%=exercise.repsOne%>"><br>
+        </div>
+        <div class="input">
+            Set 2 Weight: <input type="text" name="setTwo" value="<%=exercise.setTwo%>">
+            Reps:<input type="text" name="repsTwo" value="<%=exercise.repsTwo%>"><br>
+        </div>
+        <div class="input">
+            Set 3 Weigt: <input type="text" name="setThree" value="<%=exercise.setThree%>">
+            Reps<input type="text" name="repsThree" value="<%=exercise.repsThree%>"><br>
+        </div>
+        <div class="input">
+            Set 4 Weight<input type="text" name="setFour" value="<%=exercise.setFour%>">
+            Reps<input type="text" name="repsFour" value="<%=exercise.repsFour%>"><br>
+        </div>
+        <div class="input">
+            Video Embededed Link no Quotes: <input type="text" name="video" value="<%=exercise.video%>"><br>
+        </div>
+        <div class="input">
+            <Button a href="/home/workouts-chest">Go Back</a></Button>
+            <input type="submit" value="update changes">
+        </div>  
+    </form>
+   </div>
+   <footer>
+    <%- include('./partials/footer.ejs')%>    
+
+   </footer>
+</div>   
 </body>
 </html>
