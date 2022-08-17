@@ -197,3 +197,7 @@ a{
     align-items: center;
     margin-left: 1em;
 }
+
+li :hover{
+    color: #025839;
+}
