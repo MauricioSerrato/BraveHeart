@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/css/bootstrap.css" />
-  <link type="text/css" rel="stylesheet" href="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/css/react-select.css" />
-</head>
-    <title>Document</title>
+    <%- include ('./partials/header.ejs')%>
+
 </head>
 <body>
-    <h1>Meet Virtually Today</h1>
-     <!-- For Component and Client View -->
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/lib/vendor/react.min.js"></script>
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/lib/vendor/react-dom.min.js"></script>
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/lib/vendor/redux.min.js"></script>
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/lib/vendor/redux-thunk.min.js"></script>
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/lib/vendor/lodash.min.js"></script>
-
-  <!-- For Client View -->
-  <script src="https://source.zoom.us/zoom-meeting-{https://source.zoom.us/2.3.5/css/react-select.css}.min.js"></script>
-
-  <!-- For Component View -->
-  <script src="https://source.zoom.us/{https://source.zoom.us/2.3.5/css/react-select.css}/zoom-meeting-embedded-{https://source.zoom.us/2.3.5/css/react-select.css}.min.js"></script>
+    <header>
+        <%- include ('./partials/nav.ejs')%>
+    </header>  
+    <div class="mainLink">
+    <h1 style="text-align: center ; color: white;">Meet With Your Trainer Today! </h1>
+    <div class="meeting">
+    <iframe src="https://brave-heart.whereby.com/demo-7da4430d-3ca5-4a79-a226-48cc75c056c5" allow="camera; microphone; fullscreen; speaker; display-capture" width="80%" height="800" style="margin-left: 10%;"></iframe>
+    </div> 
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs')%>    
+    </footer>   
 </body>
 </html>

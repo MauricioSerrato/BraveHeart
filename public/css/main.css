@@ -179,3 +179,13 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.meeting{
+    height: 100vh;
+}
+
+.mainLink{
+    background-image: url(https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
